@@ -16,12 +16,37 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    CGRect firstFrame = self.window.bounds;
+    //CGRect firstFrame = self.window.bounds;
     
-    GMHypnosisterView *firstView = [[GMHypnosisterView alloc] initWithFrame:firstFrame];
+    //GMHypnosisterView *firstView = [[GMHypnosisterView alloc] initWithFrame:firstFrame];
     //firstView.backgroundColor = [UIColor redColor];
-    [self.window addSubview:firstView];
+    //[self.window addSubview:firstView];
     
+    // Create CGRects for frames
+    CGRect screenRect = self.window.bounds;
+    CGRect bigRect = screenRect;
+    bigRect.size.width *= 2.0;
+    //bigRect.size.height *= 2.0;
+    
+    // Create a screen-sized scroll view and add it to the window
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    scrollView.pagingEnabled = YES;
+    [self.window addSubview:scrollView];
+    
+    
+    // Create a super-sized hypnosis view and add it to the scroll view
+    //GMHypnosisterView *hypnosisView = [[GMHypnosisterView alloc] initWithFrame:bigRect];
+    // Create a screen-sized hypnosis view and add it to the scroll view
+    GMHypnosisterView *hypnosisView = [[GMHypnosisterView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:hypnosisView];
+    
+    // Add a scond screen-szed hypnosis view just off screen to the right
+    screenRect.origin.x += screenRect.size.width;
+    GMHypnosisterView *anotherView = [[GMHypnosisterView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:anotherView];
+    
+    // Tell the scrollview how big its content area is
+    scrollView.contentSize = bigRect.size;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -19,6 +19,7 @@
 		2C988AFB1B016D7A00C4A014 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C988AE31B016D7A00C4A014 /* UIKit.framework */; };
 		2C988B031B016D7A00C4A014 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C988B011B016D7A00C4A014 /* InfoPlist.strings */; };
 		2C988B051B016D7A00C4A014 /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C988B041B016D7A00C4A014 /* HypnosisterTests.m */; };
+		2C988B101B016E3300C4A014 /* GMHypnosisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C988B0F1B016E3300C4A014 /* GMHypnosisterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		2C988B001B016D7A00C4A014 /* HypnosisterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HypnosisterTests-Info.plist"; sourceTree = "<group>"; };
 		2C988B021B016D7A00C4A014 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C988B041B016D7A00C4A014 /* HypnosisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterTests.m; sourceTree = "<group>"; };
+		2C988B0E1B016E3300C4A014 /* GMHypnosisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMHypnosisterView.h; path = ../GMHypnosisterView.h; sourceTree = "<group>"; };
+		2C988B0F1B016E3300C4A014 /* GMHypnosisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMHypnosisterView.m; path = ../GMHypnosisterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 		2C988AE51B016D7A00C4A014 /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				2C988B0E1B016E3300C4A014 /* GMHypnosisterView.h */,
+				2C988B0F1B016E3300C4A014 /* GMHypnosisterView.m */,
 				2C988AEE1B016D7A00C4A014 /* GMAppDelegate.h */,
 				2C988AEF1B016D7A00C4A014 /* GMAppDelegate.m */,
 				2C988AF11B016D7A00C4A014 /* Images.xcassets */,
@@ -241,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C988AF01B016D7A00C4A014 /* GMAppDelegate.m in Sources */,
+				2C988B101B016E3300C4A014 /* GMHypnosisterView.m in Sources */,
 				2C988AEC1B016D7A00C4A014 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
